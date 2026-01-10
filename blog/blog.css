@@ -1,0 +1,479 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.header-section {
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    padding: 20px 5%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container-fluid .container {
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid .container li {
+    list-style: none;
+}
+
+.container .list-link {
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "Cardo", serif;
+    color: #333;
+    line-height: 1.4;
+    font-family: quicksand, sans-serif;
+}
+
+.container a:hover {
+    color: #59b51e;
+}
+
+.shopping-cart{
+    cursor: pointer;
+}
+
+
+/* Blog Section Styling */
+
+.blog-home{
+ margin-top: 120px;
+}
+
+.blog-home h1 {
+    font-size: 42px;
+    color: #222;
+    font-family: quicksand, sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: .5rem;
+    margin-left: 50px;
+}
+
+.blog-home a {
+    color: #343a40;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: quicksand, sans-serif;
+    margin-left: 50px;
+}
+
+.blog-container {
+    width: 730px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.blog-container img {
+    display: block;
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: .5rem;
+}
+
+.blog-container h3 {
+    font-size: 20px;
+    margin-bottom: .5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+    font-family: quicksand, sans-serif;
+}
+
+.blog-container h3:hover {
+    color: #5ab51e;
+    cursor: pointer;
+}
+
+.blog-container span {
+    line-height: 1.4;
+    font-family: quicksand, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 15px;
+    color: #333;
+}
+
+.blog-txt {
+    line-height: 1.4;
+    font-family: quicksand, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 15px;
+    color: #333;
+}
+
+.blog-container .calendar {
+    margin-left: 10px;
+}
+
+.blog-container p {
+    font-weight: 400;
+    color: #333;
+    font-size: 15px;
+    line-height: 1.7;
+    font-family: quicksand, sans-serif;
+    margin-bottom: 1rem;
+}
+
+.blog-container .read-more {
+    color: #333;
+    border-color: #5ab51e;
+    margin-top: 10px;
+}
+
+.read-more {
+    font-size: 14px;
+    text-transform: capitalize;
+    font-family: "Quicksand", sans-serif;
+    padding: 13px 40px;
+    font-weight: 500;
+    border: 1px solid;
+    border-radius: 35px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.blog-container .read-more:hover {
+    background: linear-gradient(27deg, #59b51e 0%, #95d239 100%);
+    color: #fff;
+}
+
+
+
+/* Buy section styling */
+
+#buy-section {
+    width: 100%;
+    min-height: 33vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    align-items: center;
+    background-image: url(./images/background-buy-img.webp);
+    background-color: #5cb620;
+    margin-top: 60px;
+    position: relative;
+}
+
+.title-buy h2 {
+    color: #fff;
+    font-size: 38px;
+    font-family: quicksand, sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+    text-transform: capitalize;
+}
+
+.title-buy p {
+    color: #fff;
+    font-family: quicksand, sans-serif;
+    font-weight: 400;
+    line-height: 1.2;
+    text-transform: capitalize;
+    margin-top: 10px;
+}
+
+.title .all-product {
+    background: linear-gradient(27deg, #59b51e 0%, #95d239 100%);
+    color: #fff;
+    border-color: #5ab51e;
+
+}
+
+.all-product {
+    font-size: 14px;
+    text-transform: capitalize;
+    font-family: "Quicksand", sans-serif;
+    padding: 13px 40px;
+    font-weight: 500;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.buy-img {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    right: 0;
+
+}
+
+
+
+/* Contact Section Styling */
+.contact-section {
+    width: 100%;
+    min-height: 90vh;
+}
+
+.contact-section .contact-img {
+    text-align: center;
+    padding-top: 80px;
+    margin-bottom: 52px;
+}
+
+.contact-us {
+    width: 100%;
+    min-height: 70vh;
+    display: grid;
+    grid-template-columns: 25% 25% 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.Contact-with .facebook {
+    margin-right: 5px;
+}
+
+.Contact-with .twitter {
+    margin-right: 5px;
+}
+
+.Contact-with .instagram {
+    margin-right: 5px;
+}
+
+.contact-us h3 {
+    font-weight: 500;
+    font-size: 18px;
+    color: #222;
+    font-family: quicksand, sans-serif;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    min-height: 30px;
+}
+
+.contact-us ul {
+    list-style: none;
+}
+
+.contact-us li {
+    margin-top: 15px;
+}
+
+.contact-us ul li a {
+    color: #222;
+    text-decoration: none;
+    font-family: quicksand, sans-serif;
+}
+
+.link-icon {
+    margin-top: 50px;
+}
+
+
+.Contact-form input {
+    width: 350px;
+    height: 50px;
+    border: 1px solid #5ab51e;
+    display: block;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border-radius: .25rem;
+}
+
+.Contact-form textarea {
+    width: 350px;
+    height: 100px;
+    display: block;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #5ab51e;
+    border-radius: .25rem;
+    margin-bottom: .5rem
+}
+
+.Contact-form input:focus,
+.Contact-form textarea:focus {
+    border-color: #5ab51e;
+    outline: none;
+}
+
+.Contact-form .submit {
+    width: 350px;
+    height: 50px;
+    font-size: 14px;
+    font-family: quicksand, sans-serif;
+    text-transform: capitalize;
+    font-weight: 500;
+    border: 1px solid;
+    color: #333;
+    border-color: #5ab51e;
+    background-color: white;
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.Contact-form .submit:hover {
+    background-color: #59b51e;
+    color: white;
+}
+
+.error {
+    color: red;
+    margin: 0px;
+    text-align: left;
+}
+
+.row .line {
+    width: 100%;
+    height: 1px;
+    background-color: #495057;
+}
+
+.footer {
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+    font-family: quicksand, sans-serif;
+    font-size: 15px;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+.footer-green {
+    color: #007bff;
+    cursor: pointer;
+}
+
+.footer-green:hover {
+    color: #59b51e;
+}
+
+
+/* Responsive Styling */
+
+/* tablet */
+@media (max-width: 992px){
+
+      /* CONTACT SECTION */
+
+     .contact-section {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-us {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media only screen and (max-width: 770px) {
+
+    /*HEADER*/
+    .header-section {
+        padding: 15px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .header-section .container {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .container .list-link {
+        font-size: 16px;
+    }
+
+    /* BLOG SECTION */
+
+    .blog-home {
+        margin-top: 100px;
+    }
+
+    .blog-home h1 {
+        font-size: 26px;
+    }
+
+    .blog-container {
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    .blog-container img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* BUY SECTION */
+    #buy-section {
+        grid-template-columns: 1fr;
+        padding: 25px;
+        text-align: center;
+    }
+
+    .buy-img {
+        position: static;
+        transform: none;
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .buy-img img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* CONTACT SECTION */
+
+    .contact-us {
+        grid-template-columns: 1fr;
+    }
+
+    .Contact-form input,
+    .Contact-form textarea,
+    .Contact-form .submit {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .container-fluid {
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+    }
+}
