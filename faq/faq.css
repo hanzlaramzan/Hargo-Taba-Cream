@@ -134,7 +134,8 @@ body {
 .ASK-question-section {
     width: 100%;
     min-height: 50vh;
-    padding: 50px 130px;
+    padding: 50px 5%;
+    box-sizing: border-box;
 }
 
 .ASK-question-section h1 {
@@ -151,11 +152,13 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 30px;
     justify-content: space-between;
+    align-items: start;
 }
 
 
 .Contact-form input {
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     height: 50px;
     border: 1px solid #5ab51e;
     display: block;
@@ -165,10 +168,12 @@ body {
     color: #495057;
     background-color: #fff;
     border-radius: .25rem;
+    box-sizing: border-box;
 }
 
 .Contact-form textarea {
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     height: 100px;
     display: block;
     padding: .375rem .75rem;
@@ -178,7 +183,8 @@ body {
     background-color: #fff;
     border: 1px solid #5ab51e;
     border-radius: .25rem;
-    margin-bottom: .5rem
+    margin-bottom: .5rem;
+    box-sizing: border-box;
 }
 
 .Contact-form input:focus,
@@ -188,7 +194,8 @@ body {
 }
 
 .Contact-form .submit {
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     height: 50px;
     font-size: 14px;
     font-family: quicksand, sans-serif;
@@ -200,6 +207,7 @@ body {
     background-color: white;
     border-radius: .25rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    box-sizing: border-box;
 }
 
 .Contact-form .submit:hover {
@@ -214,24 +222,36 @@ body {
 }
 
 .ANY-question div {
-    line-height: 1.2;
-    margin-top: 30px;
+    line-height: 1.4;
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
+}
+
+.ANY-question span:first-child {
+    flex: 1 1 auto;
+    min-width: 0;
 }
 
 .ANY-question a {
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     color: #333;
-    text-transform: capitalize;
+    text-transform: none;
     font-family: quicksand, sans-serif;
-    transition: 2 ease;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    transition: 0.2s ease;
+    white-space: normal;
+    overflow-wrap: anywhere;
+    display: block;
+}
+
+.ANY-question span:last-child img {
+    width: 20px;
+    height: auto;
+    display: block;
 }
 
 .ANY-question a:hover {
@@ -258,7 +278,7 @@ body {
 
 .title-buy h2 {
     color: #fff;
-    font-size: 38px;
+    font-size: 22px;
     font-family: quicksand, sans-serif;
     font-weight: 400;
     line-height: 1.2;
@@ -285,12 +305,12 @@ body {
     font-size: 14px;
     text-transform: capitalize;
     font-family: "Quicksand", sans-serif;
-    padding: 13px 40px;
+    padding: 10px 32px;
     font-weight: 500;
     border: none;
     border-radius: 35px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 25px;
 }
 
 .buy-img {
@@ -319,10 +339,12 @@ body {
     width: 100%;
     min-height: 70vh;
     display: grid;
-    grid-template-columns: 25% 25% 1fr;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
     justify-items: center;
-    align-items: center;
+    align-items: start;
     gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .Contact-with .facebook {
@@ -462,7 +484,14 @@ Responsive media */
 
     .ASk-container {
         justify-content: center;
-        grid-template-columns: repeat(2(minmax(300px, 1fr)));
+        grid-template-columns: repeat(2, minmax(300px, 1fr));
+        gap: 20px;
+        width: 100%;
+    }
+
+    .Contact-form {
+        width: 100%;
+        max-width: 100%;
     }
 
     .contact-us {
@@ -502,9 +531,15 @@ Responsive media */
 
     /* Ask Section Responsive */
     .ASk-container {
-        grid-template-columns: repeat(2, minmax(200px, 1fr));
+        grid-template-columns: 1fr;
         justify-content: center;
-        gap: 10px;
+        gap: 20px;
+        width: 100%;
+    }
+
+    .Contact-form {
+        width: 100%;
+        max-width: 100%;
     }
 
     .Contact-form input,
@@ -512,6 +547,10 @@ Responsive media */
     .Contact-form .submit {
         width: 100%;
         max-width: 100%;
+    }
+
+    .ASK-question-section {
+        padding: 35px 20px;
     }
 
     .ANY-question a {
@@ -545,11 +584,11 @@ Responsive media */
         align-items: center;
     }
 
-    .contact-form input,
-    .contact-form textarea,
-    .contact-form .submit {
+    .Contact-form input,
+    .Contact-form textarea,
+    .Contact-form .submit {
         width: 100%;
-        max-width: 350px;
+        max-width: 100%;
     }
 
     .contact-us {
@@ -579,8 +618,40 @@ Responsive media */
     }
 
     /* FAQ Home Section */
+    .FAQ-home {
+        width: 100%;
+        min-height: 50vh;
+        padding: 35px;
+        margin-top: 50px;
+    }
     .FAQ-home h1 {
         font-size: 20px;
+    }
+
+    .ASK-question-section {
+        width: 100%;
+        padding: 30px 18px;
+    }
+
+    .ASk-container {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .Contact-form {
+        width: 100%;
+    }
+
+    .Contact-form input,
+    .Contact-form textarea,
+    .Contact-form .submit {
+        width: 85%;
+        margin-left: 18px;
+        /* max-width: 100%; */
+        
+    }
+    .Contact-form .submit{
+        margin-bottom: 10px;
     }
 
     .FAQ-home span {
@@ -589,6 +660,10 @@ Responsive media */
 
     .FAQ-home .blog-txt {
         font-size: 12px;
+    }
+
+    .contact-us h3 {
+        text-align: center;
     }
 
     .FAQ-content h2 {

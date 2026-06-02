@@ -38,7 +38,7 @@ function videoPopupInit() {
     buttons.forEach(btn => {
         btn.addEventListener("click", function (e) {
             e.stopPropagation(); // prevent immediate closing
-            popup.style.display = "block";
+            popup.style.display = "flex";
             videoEl.currentTime = 0;
             videoEl.play();
         });

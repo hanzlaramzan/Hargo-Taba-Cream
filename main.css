@@ -67,29 +67,41 @@ body {
     justify-items: center;
     align-items: center;
     padding: 20px;
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 /* Video Popup Section */
 .video-section{
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.534);
+    background-color: rgba(0, 0, 0, 0.65);
     position: fixed;
     top: 0;
     left: 0;
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    z-index: 99;
+    z-index: 9998;
     display: none;
+    /* when shown we set inline display:flex from JS to center content */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
-.main-video-popup video{
-    max-width: 40%;
-    max-height: 50vh;
-    margin: 5vh 5vh;
-   margin-top: 150px;
+.main-video-popup video,
+.modal-content iframe,
+.modal-content video {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    max-height: 80vh;
+    margin: 0 auto;
+    display: block;
+}
+
+.main-video-popup {
+    width: 100%;
+    max-width: 920px;
+    padding: 0 10px;
 }
 
 #home-section .title {
@@ -196,7 +208,7 @@ body {
 
 #buy-section {
     width: 100%;
-    min-height: 33vh;
+    min-height: 45vh;
     display: grid;
     grid-template-columns: 50% 50%;
     /* grid-template-rows: 50% 20%; */
@@ -204,8 +216,8 @@ body {
     align-items: center;
     background-image: url(./images/background-buy-img.webp);
     background-color: #5cb620;
-    ;
     position: relative;
+    overflow: visible;
 }
 
 
@@ -234,10 +246,67 @@ body {
 
 .buy-img {
     position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+
+/* Make buy-section image responsive without affecting other sections */
+#buy-section .buy-img {
+    position: absolute;
     top: 40%;
     transform: translateY(-50%);
     right: 0;
+}
 
+#buy-section .buy-img img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 992px) {
+    /* On tablets, keep image smaller and aligned to right but within flow */
+    #buy-section .buy-img {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    #buy-section .buy-img img {
+        max-width: 220px;
+    }
+
+    /* leave buy-section sizing to default on tablets */
+}
+
+@media (max-width: 600px) {
+    /* On small screens, stack image under content to avoid overlap */
+    #buy-section {
+        display: block;
+        padding: 30px 10px;
+        /* Make panel taller so product image fits fully inside */
+        min-height: 314px;
+        overflow: visible;
+    }
+
+    #buy-section .title-buy {
+        text-align: left;
+        padding-right: 10px;
+    }
+
+    #buy-section .buy-img {
+        position: static !important;
+        transform: none !important;
+        margin: 18px auto 0 auto;
+        text-align: center;
+    }
+
+    #buy-section .buy-img img {
+        max-width: 60%;
+        height: auto;
+    }
 }
 
 
@@ -245,8 +314,8 @@ body {
 
 #Ingredients-section {
     width: 100%;
-    min-height: 95vh;
-    margin-top: 40px;
+    min-height: 80vh;
+    margin-top: 100px;
 }
 
 #Ingredients-section .title {
@@ -254,13 +323,13 @@ body {
 }
 
 .Ingredients-container {
-    height: 60vh;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     justify-items: center;
-    align-items: center;
+    align-items: start;
     text-align: center;
-    padding: 20px;
+    padding: 20px 10px;
+    gap: 20px 10px;
 }
 
 .Ingredients-container h2 {
@@ -293,7 +362,8 @@ body {
 
 #Advantages-section .advantage-images {
     max-width: 100%;
-    height: 500px;
+    height: auto;
+    max-height: 500px;
 }
 
 .features {
@@ -820,6 +890,8 @@ body {
     /* Ingredients Products Section */
     .Ingredients-container {
         grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        align-items: center;
     }
 
     .title .ingredient-title {
@@ -993,6 +1065,7 @@ body {
     .title .about-title {
         font-size: 17px;
         font-weight: 350;
+        margin-top: 20px;
     }
 
     .title .about-para {
@@ -1041,6 +1114,7 @@ body {
         grid-template-columns: 1fr;
         justify-items: center;
         align-items: center;
+        gap: 18px;
     }
 
     .Ingredients-container h2 {
@@ -1057,7 +1131,7 @@ body {
 
     /* Advantages Product Section */
     #Advantages-section {
-        margin-top: 600px;
+        margin-top: 30px;
     }
 
     .title .advantage-title {
@@ -1101,6 +1175,7 @@ body {
 
     .title .video-title {
         font-size: 19px;
+        margin-top: 20px;
     }
 
     .title .video-para {
@@ -1124,6 +1199,9 @@ body {
     #home-section {
         grid-template-columns: 1fr;
         text-align: center;
+        align-items: start;
+        min-height: auto;
+        padding-top: 120px;
     }
 
     #home-section .images {
@@ -1138,6 +1216,7 @@ body {
     #home-section .home-title,
     #home-section .home-para {
         text-align: center;
+                margin-top: 20px;
     }
 
     #home-section .all-product {
@@ -1169,6 +1248,19 @@ body {
         align-items: center;
     }
 
+    /* Remove large fixed min-heights on small screens to avoid huge gaps/overflows */
+    #home-section,
+    #about-section,
+    #Ingredients-section,
+    #ProductVideo-section,
+    .products-section,
+    .Saying-about-section,
+    #Advantages-section {
+        min-height: auto !important;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
     .title .saying-title{
         font-size: 17px;
     }
@@ -1182,6 +1274,8 @@ body {
     .Contact-form textarea,
     .Contact-form .submit{
         width: 100%;
+        /* min-width: 300px; */
+        margin-bottom: 10px;
     }
 
 }
